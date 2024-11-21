@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { viewUser, deleteUser } from '../redux/userSlice';
+import { NavLink } from 'react-router-dom';
 
 const ViewUser = () => {
 
@@ -39,7 +40,10 @@ const ViewUser = () => {
                     <td>{blog.blog_title}</td>
                     <td>{blog.blog_date}</td>
                     <td>{blog.blog_desc}</td>
-                    <td><button className='btn btn-danger' onClick={() => trash(blog.id)}>delete</button></td>
+                    <td>
+                      <button className='btn btn-danger' onClick={() => trash(blog.id)}>delete</button>
+                      <NavLink to={`/update/${blog.id}`}>edit</NavLink>
+                      </td>
                   </tr>
                 </>
               )

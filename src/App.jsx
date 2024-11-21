@@ -4,6 +4,8 @@ import Header from './layout/Header'
 import Footer from './layout/Footer'
 import AddUser from './pages/AddUser'
 import ViewUser from './pages/ViewUser'
+import Update from './pages/Update'
+import Signup from './pages/Auth/Signup'
 function App() {
 
   return (
@@ -13,6 +15,8 @@ function App() {
         <Routes>
           <Route path='/' element={<AddUser />}></Route>
           <Route path='/view' element={<ViewUser />}></Route>
+          <Route path='/update/:id' element={<Update />}></Route>
+          <Route path='/signup' element={<Signup />}></Route>
         </Routes>
         <Footer />
       </Routers>
