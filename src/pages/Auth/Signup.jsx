@@ -4,7 +4,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 
 const Signup = () => {
   async function signup(){
-    await createUserWithEmailAndPassword(auth,'jyoti12@gmail.com','122345')
+    await createUserWithEmailAndPassword(auth,'jaypatel@gmail.com','5870')
     .then((res)=>{
       console.log(res.user)
     })
